@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClient, HttpHeaders  } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { FormsModule } from '@angular/forms';
 
@@ -13,8 +13,7 @@ import { LoginComponent } from './components/pages/login/login.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { EdicaoComponent } from './components/pages/edicao/edicao.component';
 import { ListagemComponent } from './components/pages/listagem/listagem.component';
-
-
+import { JwtInterceptor } from './services/jwt.interceptor';
 
 
 @NgModule({
@@ -31,11 +30,14 @@ import { ListagemComponent } from './components/pages/listagem/listagem.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClient,
-    HttpHeaders, 
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: JwtInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

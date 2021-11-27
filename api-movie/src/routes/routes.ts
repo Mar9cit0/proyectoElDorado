@@ -5,6 +5,7 @@ import authMiddleware from "../app/middleware/authMiddleware";
 import UserController from "../app/controllers/UserController";
 import AuthController from "../app/controllers/AuthController";
 import MoviesController from "../app/controllers/MoviesControllers";
+import categoriaController from "../app/controllers/categoriasController";
 
 const router = Router();
 
@@ -18,11 +19,13 @@ router.get('/getUsers',authMiddleware,UserController.getUsers);
 router.put('/updateUser',authMiddleware,UserController.updateUser);
 router.delete('/DeleteUser',authMiddleware,UserController.DeleteUser);
 //Rotas Movies
-router.post('/movies',authMiddleware,MoviesController.createMovies);
-router.post('/getMovie/:id',authMiddleware,MoviesController.getMovie);
-router.get('/getMovies',authMiddleware,MoviesController.getMovies);
-router.put('/updateMovies',authMiddleware,MoviesController.updateMovies);
-router.delete('/DeleteMovies',authMiddleware,MoviesController.DeleteMovies);
+router.post('/movies',MoviesController.createMovies);
+router.post('/getMovie/:id',MoviesController.getMovie);
+router.get('/getMovies',MoviesController.getMovies);
+router.put('/updateMovies',MoviesController.updateMovies);
+router.delete('/DeleteMovies',MoviesController.DeleteMovies);
+
+router.get('/getCategorias/',categoriaController.getCategoria);
 
 
 export default router;
