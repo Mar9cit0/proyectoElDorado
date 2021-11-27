@@ -9,5 +9,68 @@ html,body{
   -o-background-size: cover;
   background-size: cover;
   text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 
+}
+
+h2 {
+  margin-left:20px;
+  text-align: left;
+}
+
+input {
+  height: 35px;
+  border: slategray solid 1px;
+  background-color: #efeff0;
+  width:80%;
+  margin-left:5px;
+  margin-right:5px;
+  margin-bottom:5px;
+}
+
+.container {
+
+  background-color: white;
+  height: 90%;
+  width: 85%;
+  top: 30px;
+  border-radius: 10px;
+  margin: 6% 0px 30px 0px;
+  padding: 10px;
+  display: inline-block;
+}
+
+.boton { 
+  text-decoration: none;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #5a0b07;
+}
+
+.busca {
+  width: 100px;
+  font-size:15px;
+  padding:11px;
+  border-radius: 3px;
+}
+
+.portadas {
+  display: flex;
+  padding: 12px;
+  width: 20%;
+}
+
+.portadas div {
+  margin: 9px;
+  border: #5f6061 solid 2px;
+  text-align: left;
+}
+
+.portadasInfo {
+  width: 90%;
+}
+
+.imgPortada {
+  width: 200px;
+  height: 300px;
 }

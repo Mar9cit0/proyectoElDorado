@@ -1,0 +1,11 @@
+  header {
+    overflow: hidden;
+    color:#ffffff;
+    background-color: #535351;
+    padding: 20px 10px;
+    border-bottom: 4px solid rgb(129, 29, 12);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height:10px;
+    position:fixed;
+  }
+

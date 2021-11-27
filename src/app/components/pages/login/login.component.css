@@ -1,0 +1,67 @@
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 100%;
+  color: #535351;
+}
+
+label { 
+  float:left;
+  width: 80%;
+  color: #535351;
+  margin-left:55px;
+  margin-right:55px;
+  margin-top:10px;
+  margin-bottom:10px;
+  text-align:left;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.divleft {
+  width: 50%;
+  height: 100%;
+  float: left;
+  background: -prefix-linear-gradient(top, #982520, #c25450);
+  background: linear-gradient(to bottom, #ebf4db, #252624 );
+  border-radius: 10px;
+}
+
+.logo {
+  width: 90%;
+  height: 90%;
+}
+
+.divrigth {
+  padding-top: 5%;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  display: inline-flex;
+  float:left;
+  margin:25px;
+  width: 80%;
+}
+
+
+.enviar {
+  width: 100%;
+  padding-right: 44%;
+  padding-left: 44%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+
+
+
+
+
+
+
+
+
+

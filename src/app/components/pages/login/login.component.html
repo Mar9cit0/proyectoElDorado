@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="divleft">
+      <img class="logo" src="../assets/img/logo.png">
+  </div>
+  <div class="divrigth">
+      <div>
+          <h1>Login</h1>
+      </div>
+      <div class="login">
+          <form>
+                <label>Usuário</label><input type="email" id="email" name="email" [(ngModel)]="Usuario.email" >
+                <label>Senha</label><input type="password" id="senha" name="senha" [(ngModel)]="Usuario.senha">
+                <label><a class="boton enviar" (click)="Logar()"> Enviar</a></label>
+          </form>
+      </div>
+  </div>
+</div>

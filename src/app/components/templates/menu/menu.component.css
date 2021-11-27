@@ -1,0 +1,33 @@
+menu {
+  
+  margin: 0 auto;
+  display: flex;
+  position:fixed;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+menu ul {
+  color: white;
+  list-style: none;
+}
+
+menu ul li {
+  float: left;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+menu ul li a {
+  text-decoration: none;
+  color: white;
+  line-height: 1rem;
+}
+
+menu ul li a:hover {
+  color: rgb(129, 29, 12);
+}
+

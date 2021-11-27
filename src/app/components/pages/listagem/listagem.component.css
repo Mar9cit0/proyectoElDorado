@@ -1,0 +1,9 @@
+tr {
+    text-overflow: ellipsis;
+}
+.tamanhoIcon {
+    width: 30px;
+    height: 30px;
+    align-items: left;
+  }
+  

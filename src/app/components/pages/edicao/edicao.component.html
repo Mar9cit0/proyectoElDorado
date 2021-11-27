@@ -1,0 +1,35 @@
+<app-header></app-header>
+<div class="container">
+    <div class="width100"><h1>Editando Filme: Nome Filme</h1></div>
+    <div>
+          <form action="">
+            <div>
+                <label><strong>Imagem:</strong> </label>
+                <input type="file" class="file-button" name="imagensubida" accept="image/png, .jpeg, .jpg, image/gif">
+            </div>
+            <div>
+                   <label><strong>Categoria</strong></label>
+                   <select name="categoria" id="categoria">
+                    <option value="volvo">Accion</option>
+                    <option value="saab">Romance</option>
+                    <option value="mercedes">Comedia</option>
+                    <option value="audi">Animacion</option>
+                  </select>
+            </div>
+            <div>
+                <label><strong>Duracao</strong> </label>
+                <input type="time" name="duracion" placeholder="duracion">
+            </div>
+            <div>
+              <label><strong>Synopsis</strong> </label>
+              <textarea name="Synopsis" cols="40" rows="5"></textarea>
+            </div>
+            <div>
+               <a class="boton busca" href="#">Cancelar</a>
+               <a class="boton busca" href="#">Salvar</a>
+            </div>
+
+        </form>
+    </div>
+</div>
+
