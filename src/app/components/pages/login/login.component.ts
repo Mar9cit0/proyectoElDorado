@@ -18,36 +18,44 @@ export class LoginComponent implements OnInit {
       token: ""
     }
   }
+  public hasErrors = false;
+  public errors:any[] = []
+  constructor(private authService: AuthService, private router: Router) { }
 
 
-  constructor(private authService: AuthService, private router: Router) {}
-
-  public hasErrors=false;
-  public errors = [];
   ngOnInit(): void { }
 
   Logar() {
-    console.log('logar');
+
     this.authService.Autenticar(this.Usuario).subscribe(
-     response => {
-      console.log('response', response);
-      const token = response.data.token
-      window.localStorage.setItem("_token", token);
 
-      this.router.navigate(["/home"])
+      (Response) => {
+        console.log(Response);
+        const token = Response.data.token;
+        const email = Response.email;
+        window.localStorage.setItem("_token", token);
+        window.localStorage.setItem("_email", email);
+        this.router.navigate(["home"])
+      },
+      error => {
+        console.log('error', error);
+        this.hasErrors = true;
 
-    }, error => {
-      this.hasErrors = true;
-
-      if (error.status === 401) {
-        console.log('error',error);
+        if (error.status === 401) {
+          this.errors.push(error.error.data.title)
+        }
+        if (error.status === 409) {
+          this.errors.push(error.error.data.title)
+        }
+  
+        for(let err of error.error.message) {
+          this.errors.push(err.message);
+        }
       }
 
-      for(let err of error.error.message) {
-        console.log('error',error);
-      }
-    })
-  }
+    );
+
+   }
 
 
 }

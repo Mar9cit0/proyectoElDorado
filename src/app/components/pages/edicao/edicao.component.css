@@ -1,0 +1,10 @@
+.edicao{
+    padding: 12px;  
+    width: 90%;
+}
+
+.edicao div {
+    margin: 9px;
+    padding: 15px;
+    text-align: left;
+  }

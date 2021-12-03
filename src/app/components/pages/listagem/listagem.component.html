@@ -1,73 +1,40 @@
 <app-header></app-header>
 
 <div class="container">
-    <h2>Ediçao de Filmes</h2>
-    <div class="form">
-        <form>
-            <input type="text">
-            <a class="boton busca" href="#">Buscar</a>
-        </form>
-    </div>
-
-    <div class="portadas">
-        <div>
-          <img class="imgPortada" src="../assets/img/portadas/39d101063c4e217323df91b0551175af.jpg" alt="">
-          <div class="portadasInfo">
-              <strong>Titulo:</strong>Titanic <br>
-              <strong>ano:</strong> 2019 <br>
-              <strong>descriçao:</strong>historia romantica <br>
-              <strong>Romance:</strong> Açao <br>
-              <a href="editar.html"><img class="tamanhoIcon" src="../assets/img/editar.png" alt=""></a>
-              <img class="tamanhoIcon"  src="../assets/img/bin.png" alt="">
-          </div>
-        </div>
-        <div>
-          <img class="imgPortada" src="../assets/img/portadas/33709.jpg" alt="">
-          <div>
-              <strong>Titulo:</strong>Aquaman <br>
-              <strong>ano:</strong> 2019 <br>
-              <strong>descriçao:</strong> saga de superheroes <br>
-              <strong>categoria:</strong> Açao <br>
-              <a href="editar.html"><img class="tamanhoIcon" src="../assets/img/editar.png" alt=""></a>
-              <img class="tamanhoIcon"  src="../assets/img/bin.png" alt="">
-          </div>
-        </div>
-        <div>
-          <img class="imgPortada" src="../assets/img/portadas/pantera.jfif" alt="">
-          <div class="portadasInfo">
-              <strong>Titulo:</strong>Black Panter <br>
-              <strong>ano:</strong> 2019 <br>
-              <strong>descriçao:</strong> saga de marvel superheroes <br>
-              <strong>categoria:</strong> Açao <br>
-               <a href="editar.html"><img class="tamanhoIcon" src="../assets/img/editar.png" alt=""></a>
-              <img class="tamanhoIcon"  src="../assets/img/bin.png" alt="">
-          </div>
-        </div>
-        <div>
-          <img class="imgPortada" src="../assets/img/portadas/images.jfif" alt="">
-          <div>
-              <table>
-                  <tr><strong>Titulo:</strong>Guardians of the Galaxy </tr>
-                  <tr><strong>ano:</strong> 2019 </tr>
-                  <tr><strong>descrição:</strong> saga de marvel superheroes</tr>
-                  <tr><strong>categoria:</strong> Açao </tr>
-              </table>
-
-              <a href="editar.html"><img class="tamanhoIcon" src="../assets/img/editar.png" alt=""></a>
-              <img class="tamanhoIcon"  src="../assets/img/bin.png" alt="">
-          </div>
-        </div>
-        <div>
-          <img class="imgPortada" src="../assets/img/portadas/main-qimg-be494c8b00116e083dd666819356a40a.jfif" alt="">
-          <div class="portadasInfo">
-              <strong>Titulo:</strong>Frogs <br>
-              <strong>ano:</strong> 1972 <br>
-              <strong>descriçao:</strong>filme de Misterio <br>
-              <strong>categoria:</strong> Terror/Misterio <br>
-              <a href="editar.html"><img class="tamanhoIcon" src="../assets/img/editar.png" alt=""></a>
-              <img class="tamanhoIcon"  src="../assets/img/bin.png" alt="">
-          </div>
-        </div>
-    </div>
+  <h2>Listagem de Filmes</h2>
+  <div class="form">
+    <form>
+      <input type="text">
+      <a class="boton busca" href="#">Buscar</a>
+    </form>
   </div>
 
+  <div class="portadas listagem">
+    <div *ngFor="let movie of movies">
+      <table>
+        <thead>
+          <tr><strong>Titulo:</strong>{{movie.title}} <br></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img class="editPortada" src="{{movie.portada}}" alt=""></td>
+            <td>
+          <tr> <strong>ano:</strong> {{movie.ano}} </tr>
+          <tr> <strong>Categoria:</strong>  {{movie.Categoria}} </tr>
+          <tr> <strong>Duração:</strong>  {{movie.duracao}} </tr>
+          <tr> <strong>Descripção:</strong>  {{movie.descripcao}}  </tr>
+          </td>
+          <td>
+            <tr>
+              <td> <a (click)="editarMovie(movie.id)"><img class="tamanhoIcon" src="../assets/img/editar.png" alt=""></a></td>
+            </tr>
+            <tr>
+              <td><a (click)="borrarMovie(movie.id)"><img class="tamanhoIcon" src="../assets/img/bin.png" alt=""></a></td>
+            </tr>
+          </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

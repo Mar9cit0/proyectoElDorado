@@ -6,11 +6,12 @@ import { EdicaoComponent } from './components/pages/edicao/edicao.component';
 import { ListagemComponent } from './components/pages/listagem/listagem.component';
 
 const routes: Routes = [
-  { path: '', redirectTo:'home',pathMatch:'full'},
+  { path: '', redirectTo:'login',pathMatch:'full'},
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent  },
   { path: 'listagem', component: ListagemComponent },
-  { path: 'edicao',   component: EdicaoComponent   },
+  { path: 'edicao/:id',   component: EdicaoComponent},
+
 
 
 

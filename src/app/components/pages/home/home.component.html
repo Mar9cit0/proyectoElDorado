@@ -1,6 +1,6 @@
 <app-header></app-header>
 <div class="container">
-    <div><h2>Bem-vindo:usuario</h2></div>
+    <div><h2>Bem-vindo:{{ email}}</h2></div>
     
     <div class="form">
         <form>
@@ -9,27 +9,14 @@
         </form>
     </div>
     <div><h2>Mas populares</h2></div> 
-    <div class="portadas">
-        <div>
-          <img class="imgPortada" src="../assets/img/portadas/39d101063c4e217323df91b0551175af.jpg" alt="">
-          <p><strong>Titanic </strong><br>1997</p>
-        </div>
-        <div>
-          <img class="imgPortada" src="../assets/img/portadas/33709.jpg" alt="">
-          <p><strong>Aquaman </strong><br>1998</p>
-        </div>
-        <div>
-          <img class="imgPortada" src="../assets/img/portadas/pantera.jfif" alt="">
-          <p><strong>Black Panter </strong><br>2019</p>
-        </div>
-        <div>
-          <img class="imgPortada" src="../assets/img/portadas/images.jfif" alt="">
-          <p><strong>Guardians of the Galaxy  </strong><br>1998</p>
-        </div>
-        <div>
-          <img class="imgPortada" src="../assets/img/portadas/main-qimg-be494c8b00116e083dd666819356a40a.jfif" alt="">
-          <p><strong>Frogs </strong><br>2002</p>
-        </div>
+    <div class="errors" *ngIf="hasErrors">
+      <p *ngFor="let error of errors">{{ error }}</p>
     </div>
+    <div class="portadas home">
+        <div *ngFor="let movie of movies">
+          <img class="imgPortada" src="{{movie.portada}}" alt="">
+          <p><strong>{{movie.title}} </strong><br>{{movie.ano}}</p>
+        </div>
+      </div>
   </div>
 <app-footer></app-footer>

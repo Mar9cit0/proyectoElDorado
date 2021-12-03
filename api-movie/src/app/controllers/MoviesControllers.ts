@@ -40,6 +40,7 @@ class MoviesController {
     }
 
     async DeleteMovies(req:Request, res:Response) {
+        console.log('Params',req.params);
         const movieResult = await getRepository(Movies).delete(req.params.id);
         return res.json(movieResult);
     };

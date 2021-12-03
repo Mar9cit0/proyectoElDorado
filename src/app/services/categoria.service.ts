@@ -13,6 +13,6 @@ export class CategoriaService {
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<Categoria> {
-    return this.http.get<Categoria>(`${environment.baseApiUrl}/category`);
+    return this.http.get<Categoria>('getCategorias');
   }
 }

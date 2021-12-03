@@ -5,9 +5,11 @@ menu {
   position:fixed;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
   top: 0;
   width: 100%;
+  background-color: #535351;      
+  border-bottom: 4px solid rgb(129, 29, 12);
+  
 }
 
 menu ul {
@@ -18,7 +20,7 @@ menu ul {
 menu ul li {
   float: left;
   padding-right: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 0px;
 }
 
 menu ul li a {

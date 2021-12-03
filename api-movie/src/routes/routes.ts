@@ -23,7 +23,7 @@ router.post('/movies',MoviesController.createMovies);
 router.post('/getMovie/:id',MoviesController.getMovie);
 router.get('/getMovies',MoviesController.getMovies);
 router.put('/updateMovies',MoviesController.updateMovies);
-router.delete('/DeleteMovies',MoviesController.DeleteMovies);
+router.delete('/DeleteMovies/:id',MoviesController.DeleteMovies);
 
 router.get('/getCategorias/',categoriaController.getCategoria);
 
